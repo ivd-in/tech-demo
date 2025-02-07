@@ -1,3 +1,5 @@
+"use client"
+import { useState } from "react"; // Import useState hook
 import { cn } from "@/lib/utils";
 import { Marquee } from "../ui/marquee";
 
