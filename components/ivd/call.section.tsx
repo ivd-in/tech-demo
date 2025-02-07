@@ -9,7 +9,7 @@ export default function CallSection() {
           </h2>
           <p className="text-sm">
             Book a call to see how Perspective Design can help elevate your
-            company's designs to the next level.
+            company&apos;s designs to the next level.
           </p>
           <InteractiveHoverButton className="text-sm">
             Schedule a call
