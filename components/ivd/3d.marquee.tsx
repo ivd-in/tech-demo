@@ -1,10 +1,8 @@
-"use client";
-
+import React, { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Marquee } from "../ui/marquee";
 import { InteractiveHoverButton } from "../interactive-hover-button";
-import { useState } from "react";
-import { Button } from "../ui/button";
 
 const reviews = [
   {
@@ -51,13 +49,9 @@ const secondRow = reviews.slice(reviews.length / 2);
 const ReviewCard = ({
   img,
   name,
-  username,
-  body,
 }: {
   img: string;
   name: string;
-  username: string;
-  body: string;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -87,11 +81,7 @@ const ReviewCard = ({
             isHovered ? "opacity-100" : "opacity-0"
           )}
         >
-          {/* <h3 className="text-white text-lg font-semibold">{name}</h3>
-          <p className="text-white text-sm">{body}</p> */}
-
           <div className="max-w-[150px] space-y-2">
-            {" "}
             <button className="bg-background w-full p-[0.5rem_1rem] text-xs font-semibold rounded-xl">
               View Project
             </button>
