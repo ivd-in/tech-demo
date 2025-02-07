@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, HandHeart } from "lucide-react";
+import { HandHeart } from "lucide-react";
 import { InteractiveHoverButton } from "../interactive-hover-button";
 import { Badge } from "../ui/badge";
 
