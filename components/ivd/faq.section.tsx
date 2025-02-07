@@ -70,7 +70,7 @@ export default function FAQSection() {
             className="hover:bg-muted rounded-xl px-4 border"
           >
             <AccordionTrigger className="text-sm">
-              Why wouldn't I just hire a full-time designer?
+              Why wouldn&apos;t I just hire a full-time designer?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
               A full-time designer can be expensive and hard to source. Your
