@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from "react";
-import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Marquee } from "../ui/marquee";
 import { InteractiveHoverButton } from "../interactive-hover-button";
