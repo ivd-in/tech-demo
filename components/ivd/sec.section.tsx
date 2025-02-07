@@ -105,6 +105,9 @@ export default function StickyCards() {
                     },
                   }}
                   viewport={{ once: true, margin: "-20%" }}
+                  style={{
+                    opacity: scrollYProgress.get() * 1.5, // You can use the scrollYProgress value to animate opacity or other styles
+                  }}
                 >
                   <div className="flex gap-4 items-center">
                     <span className="text-foreground w-4 h-4">{step.icon}</span>
@@ -120,4 +123,3 @@ export default function StickyCards() {
     </div>
   )
 }
-
