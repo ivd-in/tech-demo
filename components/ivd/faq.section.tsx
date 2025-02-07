@@ -109,7 +109,7 @@ export default function FAQSection() {
             className="hover:bg-muted rounded-xl px-4 border"
           >
             <AccordionTrigger className="text-sm">
-              Are there any refunds if I don't like the service?
+              Are there any refunds if I don&apos;t like the service?
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
               Because we deliver custom design work it&apos;s not possible to
