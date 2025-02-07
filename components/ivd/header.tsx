@@ -1,11 +1,8 @@
 "use client";
-import { useMenu } from "@/hooks/useMenu";
-import React from "react";
-import Link from "next/link";
 const Header = () => {
-  const { isOpen, toggleMenu } = useMenu();
   return (
     <>
+      hello world
       {/* <nav className="g-nav">
         <div className="w-layout-blockcontainer g_container w-container">
           <div className="nav_layout">
