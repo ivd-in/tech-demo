@@ -1,4 +1,3 @@
-import { MarqueeDemo } from "./review.card";
 
 const ReviewSection = () => {
   return (
