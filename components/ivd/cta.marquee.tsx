@@ -42,34 +42,43 @@ const data = [
 
 const firstRow = data.slice(0, data.length / 2);
 
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) => {
+const ReviewCard = ({ img, name }: { img: string; name: string }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <figure
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden"
-        // light styles
-        // "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // // dark styles
-        // "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "relative w-[400px] h-[250px] cursor-pointer overflow-hidden rounded-xl"
       )}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium text-primary">
-            {name}
-          </figcaption>
-          {/* <p className="text-xs font-medium dark:text-white/40">{username}</p> */}
+      <div className="h-full">
+        <img
+          className={cn(
+            "aspect-square w-full object-cover transition-transform duration-300",
+            isHovered && "scale-110"
+          )}
+          alt={name}
+          src={img || "/placeholder.svg"}
+        />
+        {isHovered && (
+          <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
+        )}
+        <div
+          className={cn(
+            "absolute inset-0 flex flex-col items-center w-full justify-center bg-black bg-opacity-70 transition-opacity duration-300 p-4 text-center",
+            isHovered ? "opacity-100" : "opacity-0"
+          )}
+        >
+          <div className="max-w-[150px] space-y-2">
+            <button className="bg-background w-full p-[0.5rem_1rem] text-xs font-semibold rounded-xl">
+              View Project
+            </button>
+            <button className="hover:bg-background/25 text-secondary hover:backdrop-blur-md w-full p-[0.5rem_1rem] text-xs font-semibold rounded-xl">
+              Details
+            </button>
+          </div>
         </div>
       </div>
     </figure>
