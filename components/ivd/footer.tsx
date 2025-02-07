@@ -1,4 +1,4 @@
-import { Github, Instagram, MapPin } from "lucide-react";
+import { Github, Instagram } from "lucide-react";
 import Link from "next/link";
 import type { FC } from "react";
 
