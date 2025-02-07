@@ -94,6 +94,7 @@ export default function StickyCards() {
                   className={`${step.color} p-6 rounded-2xl space-y-2 border sticky`}
                   style={{
                     top: `${i * 15 + 20}px`,
+                    opacity: scrollYProgress.get() * 1.5, // Combine opacity with other styles here
                   }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{
@@ -105,9 +106,6 @@ export default function StickyCards() {
                     },
                   }}
                   viewport={{ once: true, margin: "-20%" }}
-                  style={{
-                    opacity: scrollYProgress.get() * 1.5, // You can use the scrollYProgress value to animate opacity or other styles
-                  }}
                 >
                   <div className="flex gap-4 items-center">
                     <span className="text-foreground w-4 h-4">{step.icon}</span>
